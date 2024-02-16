@@ -4,25 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="bubble.css">
-    <title>Bubble Game </title>
+    <title>Bubble Game</title>
 </head>
 <body>
     <div class="main">
         <div class="panel">
-            <div id="panel-top">
-                <div class="elements">
-                    <h4>Hit</h4>
-                    <div class="box">4</div>
-                </div>
-                <div class="elements">
-                    <h4>Timer</h4>
-                    <div class="box">60</div>
-                </div>
-                <div class="elements">
-                    <h4>Score</h4>
-                    <div class="box">12</div>
-                </div>
+        <div class="panel-top">
+            <div class="element">
+                <h4>Hit</h4>
+                <div class="box" id="hitval"></div>
             </div>
+            <div class="element">
+                <h4>Timer</h4>
+                <div class="box" id="timervalue">60</div>
+            </div>
+            <div class="element">
+                <h4>Score</h4>
+                <div class="box" id="scoreval">00</div>
+            </div>
+        </div>
+        <div class="panel-bottom">
+            
+        </div>
         </div>
     </div>
     <script src="bubble.js"></script>
