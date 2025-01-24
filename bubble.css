@@ -1,60 +1,73 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html,body{
+html, body {
     height: 100%;
     width: 100%;
+    font-family: Arial, sans-serif;
 }
 
-.main{
+.main {
     background-color: rgb(76, 166, 76);
     height: 100%;
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;   
+    align-items: center;
 }
 
-.panel{
-    height: 80%;
-    width: 80%;
+.panel {
+    height: 90%;
+    width: 90%;
+    max-width: 1200px;
+    max-height: 700px;
     background-color: whitesmoke;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
 }
 
-.panel-top{
+.panel-top {
     width: 100%;
     height: 10vh;
+    min-height: 50px;
     background-color: rgb(42, 141, 42);
     display: flex;
     justify-content: space-between;
-    font-size: large;
+    align-items: center;
+    padding: 0 20px;
+    font-size: 1rem;
     color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
-.element{
-    display:flex;
+.element {
+    display: flex;
     align-items: center;
     gap: 10px;
-    padding: 0 10px;
     font-weight: 600;
 }
 
-.box{
+.box {
     background-color: whitesmoke;
-    padding: 10px;
-    border-radius: 2px;
-    height: 30px;
-    width: 40px;
+    padding: 5px;
+    border-radius: 5px;
+    height: 2rem;
+    width: 2.5rem;
     color: rgb(42, 141, 42);
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 0.9rem;
+    font-weight: 600;
 }
 
-.panel-bottom{
+.panel-bottom {
     width: 100%;
     height: calc(100% - 10vh);
     background-color: rgb(204, 253, 204);
@@ -63,23 +76,85 @@ html,body{
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
-    gap: 5px;
-
+    gap: 10px;
+    overflow-y: auto;
 }
 
-.bubble{
+.bubble {
     height: 40px;
     width: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 600;
+    font-size: 0.9rem;
     background-color: rgb(42, 141, 42);
     color: white;
     border-radius: 50%;
+    transition: background-color 0.3s ease;
 }
 
-.bubble:hover{
+.bubble:hover {
     cursor: pointer;
     background-color: rgb(28, 99, 28);
+}
+
+@media (max-width: 768px) {
+    .panel {
+        height: 95%;
+        width: 95%;
+    }
+
+    .panel-top {
+        font-size: 0.9rem;
+        padding: 0 15px;
+    }
+
+    .panel-bottom {
+        padding: 15px;
+        gap: 8px;
+    }
+
+    .bubble {
+        height: 35px;
+        width: 35px;
+        font-size: 0.8rem;
+    }
+
+    .box {
+        height: 1.8rem;
+        width: 2rem;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .panel {
+        height: 100%;
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .panel-top {
+        height: 8vh;
+        padding: 0 10px;
+        font-size: 0.8rem;
+    }
+
+    .panel-bottom {
+        gap: 5px;
+        padding: 10px;
+    }
+
+    .bubble {
+        height: 30px;
+        width: 30px;
+        font-size: 0.7rem;
+    }
+
+    .box {
+        height: 1.5rem;
+        width: 1.8rem;
+        font-size: 0.7rem;
+    }
 }
