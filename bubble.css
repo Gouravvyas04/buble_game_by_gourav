@@ -107,45 +107,6 @@ html, body {
   transform: scale(1.1);
 }
 
-/* /* Preloader Styling */
-/* .preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.95);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-} */
-
-/* Loader Animation */
-.loader {
-  width: 60px;
-  height: 60px;
-  border: 5px solid #e9eff6;
-  border-top: 5px solid #1e3c72;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-} */
-
-/* Smooth Spinning Animation */
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-/* Hide Preloader */
-.hidden {
-  display: none;
-}
-
 /* RESPONSIVENESS */
 
 /* Tablets & Small Screens */
