@@ -107,8 +107,8 @@ html, body {
   transform: scale(1.1);
 }
 
-/* Preloader Styling */
-.preloader {
+/* /* Preloader Styling */
+/* .preloader {
   position: fixed;
   top: 0;
   left: 0;
@@ -119,7 +119,7 @@ html, body {
   justify-content: center;
   align-items: center;
   z-index: 1000;
-}
+} */
 
 /* Loader Animation */
 .loader {
@@ -129,7 +129,7 @@ html, body {
   border-top: 5px solid #1e3c72;
   border-radius: 50%;
   animation: spin 1s linear infinite;
-}
+} */
 
 /* Smooth Spinning Animation */
 @keyframes spin {
