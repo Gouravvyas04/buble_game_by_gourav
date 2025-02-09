@@ -10,23 +10,28 @@ html, body {
   height: 100%;
   width: 100%;
   background-color: #f4f7f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Main container */
 .main {
   background: linear-gradient(to bottom right, #1e3c72, #2a5298);
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
+  padding: 5%;
 }
 
 /* Panel container */
 .panel {
-  height: 80%;
-  width: 85%;
+  width: 90%;
+  max-width: 600px;
+  height: 85vh;
+  max-height: 700px;
   background-color: #ffffff;
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
@@ -38,13 +43,14 @@ html, body {
 /* Panel Top - Header */
 .panel-top {
   width: 100%;
-  height: 12vh;
+  height: 12%;
+  min-height: 50px;
   background: linear-gradient(to right, #1e3c72, #2a5298);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
-  font-size: 18px;
+  padding: 10px 20px;
+  font-size: 1rem;
   color: white;
   font-weight: bold;
 }
@@ -59,7 +65,7 @@ html, body {
 /* Box Styling */
 .box {
   background-color: #ffffff;
-  padding: 12px;
+  padding: 10px;
   border-radius: 5px;
   height: 35px;
   width: 50px;
@@ -74,14 +80,15 @@ html, body {
 /* Panel Bottom - Content Area */
 .panel-bottom {
   width: 100%;
-  height: calc(100% - 12vh);
+  flex-grow: 1;
   background-color: #e9eff6;
   padding: 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
-  gap: 8px;
+  gap: 10px;
+  overflow-y: auto;
 }
 
 /* Bubble Styling */
@@ -113,17 +120,17 @@ html, body {
 @media (max-width: 768px) {
   .panel {
     width: 95%;
-    height: 85%;
+    height: 90vh;
   }
 
   .panel-top {
-    height: 10vh;
-    font-size: 16px;
+    height: 10%;
+    font-size: 0.9rem;
   }
 
   .box {
     height: 30px;
-    width: 40px;
+    width: 45px;
     font-size: 14px;
   }
 
@@ -138,18 +145,18 @@ html, body {
 @media (max-width: 480px) {
   .panel {
     width: 98%;
-    height: 90%;
+    height: 95vh;
   }
 
   .panel-top {
-    height: 10vh;
-    font-size: 14px;
-    padding: 0 10px;
+    height: 10%;
+    font-size: 0.85rem;
+    padding: 0 12px;
   }
 
   .box {
     height: 28px;
-    width: 38px;
+    width: 40px;
     font-size: 12px;
   }
 
@@ -157,5 +164,30 @@ html, body {
     height: 40px;
     width: 40px;
     font-size: 12px;
+  }
+}
+
+/* Extra Small Screens */
+@media (max-width: 360px) {
+  .panel {
+    width: 100%;
+    height: 97vh;
+  }
+
+  .panel-top {
+    font-size: 0.8rem;
+    padding: 0 8px;
+  }
+
+  .box {
+    height: 26px;
+    width: 35px;
+    font-size: 11px;
+  }
+
+  .bubble {
+    height: 35px;
+    width: 35px;
+    font-size: 10px;
   }
 }
